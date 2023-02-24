@@ -3,21 +3,36 @@
     margin: 0;
     box-sizing: content-box;
     font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s;
 }
 .card article{
-    width: 100%
+    width: 100%;
+    overflow: hidden;
 }
 .card *{
     color: white;
 }
 .card article img{
     width: 100%;
+    border-radius: 10px 10px 0 0;
 }
 .card{
     background-color: black;
     border-radius: 10px;
     width: calc(100% / 4);
 }
-.card div p{
-    padding-bottom: 5px;
+.contentText{
+    padding: 10px;
+}
+.card:hover .imgCard{
+    transform: scale(1.2);
+}
+.contentText h3{
+    margin: 10px 0 10px 0;
+    text-align: center;
+    text-decoration: none;
+}
+.contentText p, .contentText p a{
+    text-align: center;
+    color: #e1ca94;
 }
