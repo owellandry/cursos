@@ -36,3 +36,43 @@
     text-align: center;
     color: #e1ca94;
 }
+
+/* Navagacion */
+
+img {
+    width: 10%;
+}
+
+.nav__contenido {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-bg {
+    background-color: blue;
+}
+
+
+/*Cartas Contenido cursos*/
+.card article{
+    width: 100%
+}
+.card *{
+    color: white;
+}
+.card article img{
+    width: 100%;
+}
+.card{
+    background-color: black;
+    border-radius: 10px;
+    width: calc(100% / 4);
+}
+.card div p{
+    padding-bottom: 5px;
+}
