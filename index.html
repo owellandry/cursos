@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
    
   </head>
   <body>
@@ -35,17 +36,33 @@
     <section class="contentCards">
       <div class="flexCards">
         <div class="card">
-          <a href="#">
+          <a href="/src/html.html">
             <article>
               <img
                 class="imgCard"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"
+                src="img/html.png"
                 alt="IMAGEN"
               />
             </article>
             <div class="contentText">
               <h4>Titulo del video</h4>
-              <p><a href="">Ver Video...</a></p>
+              <p><a href="">VER VIDEO</a></p>
+            </div>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="img/css.png">
+            <article>
+              <img
+                class="imgCard"
+                src="img/css.png"
+                alt="IMAGEN"
+              />
+            </article>
+            <div class="contentText">
+              <h4>Titulo del video</h4>
+              <p><a href="">VER VIDEO</a></p>
             </div>
           </a>
         </div>
@@ -55,29 +72,13 @@
             <article>
               <img
                 class="imgCard"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"
+                src="img/js.png"
                 alt="IMAGEN"
               />
             </article>
             <div class="contentText">
               <h4>Titulo del video</h4>
-              <p><a href="">Ver Curso...</a></p>
-            </div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="#">
-            <article>
-              <img
-                class="imgCard"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"
-                alt="IMAGEN"
-              />
-            </article>
-            <div class="contentText">
-              <h4>Titulo del video</h4>
-              <p><a href="">Ver Curso...</a></p>
+              <p><a href="">VER VIDEO</a></p>
             </div>
           </a>
         </div>
@@ -101,7 +102,7 @@
             </article>
             <div class="contentText">
               <h4>Titulo del video</h4>
-              <p><a href="">Ver Curso...</a></p>
+              <p><a href="">VER VIDEO</a></p>
             </div>
           </a>
         </div>
@@ -117,7 +118,7 @@
             </article>
             <div class="contentText">
               <h4>Titulo del video</h4>
-              <p><a href="">Ver Curso...</a></p>
+              <p><a href="">VER VIDEO</a></p>
             </div>
           </a>
         </div>
@@ -133,7 +134,7 @@
             </article>
             <div class="contentText">
               <h4>Titulo del video</h4>
-              <p><a href="">Ver Curso...</a></p>
+              <p><a href="">VER VIDEO</a></p>
             </div>
           </a>
         </div>
@@ -149,7 +150,7 @@
             </article>
             <div class="contentText">
               <h4>Titulo del video</h4>
-              <p><a href="">Ver Curso...</a></p>
+              <p><a href="">VER VIDEO</a></p>
             </div>
           </a>
         </div>
@@ -165,7 +166,7 @@
             </article>
             <div class="contentText">
               <h4>Titulo del video</h4>
-              <p><a href="">Ver Curso...</a></p>
+              <p><a href="">VER VIDEO</a></p>
             </div>
           </a>
         </div>
@@ -181,7 +182,7 @@
             </article>
             <div class="contentText">
               <h4>Titulo del video</h4>
-              <p><a href="">Ver Curso...</a></p>
+              <p><a href="">VER VIDEO</a></p>
             </div>
           </a>
         </div>
@@ -197,7 +198,7 @@
             </article>
             <div class="contentText">
               <h4>Titulo del video</h4>
-              <p><a href="">Ver Curso...</a></p>
+              <p><a href="">VER VIDEO</a></p>
             </div>
           </a>
         </div>
@@ -213,7 +214,7 @@
             </article>
             <div class="contentText">
               <h4>Titulo del video</h4>
-              <p><a href="">Ver Curso...</a></p>
+              <p><a href="">VER VIDEO</a></p>
             </div>
           </a>
         </div>
@@ -276,6 +277,13 @@
       </div>
 </footer>-->
     <script src="js/script.js"></script>
+
+    <IfModule mod_rewrite.c>
+      RewriteEngine on
+      RewriteCond %{REQUEST_FILENAME} !-d
+      RewriteCond %{REQUEST_FILENAME}.php -f
+      RewriteRule ^(.*)$ $1.php
+    </IfModule>
    
   </body>
 </html>
