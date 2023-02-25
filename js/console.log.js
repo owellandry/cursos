@@ -1,0 +1,2 @@
+console.info("%c¡NO DEBERIAS ESTAR EN ESTE LUGAR!", "color:#fff; padding: 5px 10px; font-size:25px;");
+console.warn("%c¡NO DEBERIAS ESTAR EN ESTE LUGAR!", "color:#fff; padding: 5px 10px; font-size:25px;");

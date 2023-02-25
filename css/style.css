@@ -3,12 +3,18 @@
     margin: 0;
     box-sizing: content-box;
     font-family: Arial, Helvetica, sans-serif;
-    transition: all 0.3s;
     text-decoration: none;
+}
+
+/* Cards y loader */
+
+.title{
+    margin-top: 50px;
 }
 .contentCards{
     justify-content: center;
     display: flex;
+    margin-top: 50px;
 }
 .flexCards{
     display: flex;
@@ -26,22 +32,24 @@
 }
 .card article img{
     width: 100%;
-    border-radius: 10px 10px 0 0;
+    border-radius: 40px;
     height: calc(100% - 100px);
+    transition: all 0.3s;
 }
 .card{
-    background-color: black;
+    background-color: #242323;
     border-radius: 10px;
     width: calc(100% / 5);
-    min-width: 200px;
+    min-width: 220px;
 }
 .contentText{
     padding: 10px;
+    box-shadow: 0px 0px 100px 13px #242323;
 }
 .card:hover .imgCard{
     transform: scale(1.2);
 }
-.contentText h3{
+.contentText h4{
     margin: 10px 0 10px 0;
     text-align: center;
     text-decoration: none;
@@ -50,57 +58,306 @@
     text-align: center;
     color: #e1ca94;
 }
+.loader{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #000000ef;
+    position: fixed;
+    transition: all 1s;
+    overflow: hidden;
+}
+.flechaIzq{
+    transform: rotate(180deg);
+}
+.logoHidden{
+    opacity: 0;
+    transition: all 0.5s;
+}
+.displayNone{
+    display: none;
+}
+.imgLogo{
+    width: 400px;
+    height: 400px;
+}
+.logoOpacity{
+    width: 1500px;
+    height: 1500px;
+    transition: all 0.5s;
+}
 @media (max-width: 800px) {
     .card{
-    min-width: 180px;
+    min-width: 200px;
 }
 .flexCards{
     width: 95%;
 }
 }
 
-
-
-
-
-
-
 /* Navagacion */
 
-img {
-    width: 10%;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #222831;
 }
 
-.nav__contenido {
+a,
+button {
+  color: white;
+}
+
+.image-clickable {
+  margin-right: auto;
+}
+
+.logo {
+  height: 4.2rem;
+  margin-right: auto;
+  margin-left: 3rem
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0 1.25rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  transition: all 0.5s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: rgba(0, 173, 181, 0.8);
+}
+
+button, .button{
+  cursor: pointer;
+  padding: 9px 20px;
+  border: none;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  transition: all 0.5s ease 0s;
+  margin-left: 20px;
+}
+
+/* carrusek */
+
+.flecha{
+    width: 100px;
+    filter: invert(1);
+}
+.fondoFlecha{
+    z-index: 10 ;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.582);
+}
+.flechaIzq{
+    left: 0px;
+}
+.flechaDer{
+    right: 0px;
+}
+.contentCarrusel{
     display: flex;
-    justify-content: space-between;
+    position: relative;
+}
+.carrusel{
+    overflow: hidden;
+    width: calc(80%);
+    margin-top: 100px;
+}
+.sectionCarrusel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cardCarrusel{
+    margin-right: 25px;
 }
 
-nav a{
-    text-decoration: none;
-    color: white;
+/*Footer
+
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
 }
 
-.nav-bg {
-    background-color: blue;
-}
-
-
-/*Cartas Contenido cursos*/
-.card article{
-    width: 100%
-}
-.card *{
-    color: white;
-}
-.card article img{
-    width: 100%;
-}
-.card{
-    background-color: black;
-    border-radius: 10px;
-    width: calc(100% / 4);
-}
-.card div p{
-    padding-bottom: 5px;
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
