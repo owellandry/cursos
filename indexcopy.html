@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/screenshot.css"> 
+    <link rel="stylesheet" href="css/style.css" /> 
    
   </head>
-  <body> 
-    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999999; background: transparent;"></div>
+  <body>
 
     <div class="loader" style="z-index: 100;">
       <img class="imgLogo" src="./img/logo2.png" alt="ANONYFEEL" />
@@ -87,7 +85,18 @@
       </div>
     </section>
 
-    
+    <!-- Accessibility by userway -->
+    <script>
+      (function(d) {
+          var s = d.createElement("script");
+            @@ -513,6 +513,10 @@ <h2 class="mb-5">Premios &amp; Reconocimientos</h2>
+          (d.body || d.head).appendChild(s);
+      })(document)
+  </script>
+
+  <!-- Disable-printscreen -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="./js/disablePrintScreen.js"></script>
     <script src="js/script.js"></script>
     <script src="js/console.log.js"></script>
     <script src="js/screenshot.js"></script>
