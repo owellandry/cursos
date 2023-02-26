@@ -1,62 +1,137 @@
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+.body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
 }
 
-body {
-  background: #eee;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-  min-height: 100vh;
+footer {
+position: absolute!important;
+object-fit: cover;
+background-image: url(https://i.ibb.co/VC3RGqw/foodgod-banner.png);
 }
-.container{
-  width: 90%;
-  padding: 10px 40px;
-}
-.container .swiper-container{
+
+footer {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "main" "footer";
+  overflow-x: hidden;
+  
   width: 100%;
-  height: 100%;
-}
-.container .swiper-slide {
-  position: relative;
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  border-radius: 15px;
-  text-align: start;
-  box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.25);
+  background-size: cover;
+  background: ;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
  
 }
-.container .swiper-slide img{
-   display: block;
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+footer .footer {
+  z-index: 1;
+  --footer-background:#ED5565;
+  display: grid;
+  position: relative;
+  grid-area: footer;
+  min-height: 12rem;
+}
+footer .footer .bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background: var(--footer-background);
+  filter: url("#blob");
+}
+footer .footer .bubbles .bubble {
+  position: absolute;
+  left: var(--position, 50%);
+  background: var(--footer-background);
+  border-radius: 100%;
+  -webkit-animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+          animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+  transform: translate(-50%, 100%);
+}
+footer .footer .content {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 4rem;
+  padding: 2rem;
+  background: var(--footer-background);
+}
+footer .footer .content a, body .footer .content p {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+footer .footer .content b {
+  color: white;
+}
+footer .footer .content p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+footer .footer .content > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .footer .content > div > div {
+  margin: 0.25rem 0;
+}
+footer .footer .content > div > div > * {
+  margin-right: 0.5rem;
+}
+footer .footer .content > div .image {
+  align-self: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.25rem 0;
+  background-size: cover;
+  background-position: center;
+}
 
+@-webkit-keyframes bubble-size {
+  0%, 75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
 }
-.container .swiper-slide .card-description{
-    padding:1rem 1rem;
+
+@keyframes bubble-size {
+  0%, 75% {
+    width: var(--size, 4rem);
+    height: var(--size, 4rem);
+  }
+  100% {
+    width: 0rem;
+    height: 0rem;
+  }
 }
-.container .swiper-slide .card-title,.container .swiper-slide .card-text{
-   margin-bottom: .5rem;
+@-webkit-keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
 }
-.container .swiper-slide .card-link{
-   text-align: center;
-  
+@keyframes bubble-move {
+  0% {
+    bottom: -4rem;
+  }
+  100% {
+    bottom: var(--distance, 10rem);
+  }
 }
-.container .swiper-slide .card-link a{
-    text-decoration: none;
-    color: #1d6ce2;
+
+.divpic
+{
+  position: absolute;
+  width: 100%;
 }
-.swiper-button-next{
-    right: 26px !important;
-}
-.swiper-button-prev{
-    left: 26px !important;
+
+img{
+  margin-left:65px;
 }
